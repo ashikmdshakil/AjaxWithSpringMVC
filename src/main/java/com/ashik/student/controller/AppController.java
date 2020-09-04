@@ -22,6 +22,12 @@ public class AppController {
 	@Autowired
 	private StudentDao studentdao;
 	
+	@RequestMapping("/")
+	@ResponseBody
+	public String getHomePAge() {
+		return "index.jsp";
+	}
+	
 	@RequestMapping("save")
 	@ResponseBody
 	public String saveStudent(@RequestParam("name") String name, String mail, String department){
