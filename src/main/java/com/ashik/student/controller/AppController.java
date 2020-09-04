@@ -52,8 +52,8 @@ public class AppController {
 	public String getStudent(@RequestParam("mail") String mail){
 		System.out.println(mail);
 		Gson gson = new Gson();
-		String json = gson.toJson(studentdao.getStudent(mail));
-		return json;
+		// String json = gson.toJson(studentdao.getStudent(mail));
+		return gson.toJson(studentdao.getStudent(mail));
 	}
 	@RequestMapping("delete")
 	@ResponseBody
